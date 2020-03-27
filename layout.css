@@ -1,0 +1,65 @@
+﻿
+body
+{
+    background-color: aqua;
+}
+.grid
+{
+    text-align:center;
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-rows: 15vh 25vh 30vh 15vh;
+    grid-template-areas:"... titel ..."
+                        "... bild ..."
+                        "... text ..."
+                        "footer footer footer";
+}
+.titel
+{
+    grid-area: titel;
+    background-color: green;
+}
+.bild
+{
+    grid-area: bild;
+    background-color: springgreen;
+}
+.text {
+    grid-area: text;
+    background-color: palevioletred;
+}
+.footer {
+    grid-area: footer;
+    background-color: springgreen;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul.topMeny 
+{
+    height: 15vh;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: azure;
+}
+
+
+ul.topMeny > #grenarMeny
+{
+    float:right
+}
+
+ul.topMeny > #indexMeny {
+
+}
+
+ul.topMeny > #rankingMeny {
+   float: left;
+}
+
+
