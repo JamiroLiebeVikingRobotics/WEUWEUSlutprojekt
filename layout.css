@@ -8,17 +8,26 @@ body
     text-align:center;
     display: grid;
     grid-template-columns: 25vw 50vw 25vw;
-    grid-template-rows: 15vh 25vh 30vh 15vh;
-    grid-template-areas:"... titel ..."
+    grid-template-rows:20vh 15vh 30vh 25vh 10vh;
+    grid-template-areas:
+						"nav nav nav"
+						"... titel ..."
                         "... bild ..."
                         "... text ..."
                         "footer footer footer";
 }
-.titel
+
+.titel 
 {
+	
     grid-area: titel;
     background-color: green;
-}
+}	
+	.titel > h1
+	{
+		text-align:center;
+
+	}
 .bild
 {
     grid-area: bild;
@@ -33,12 +42,8 @@ body
     background-color: springgreen;
 }
 
-a
-{
-    text-decoration: none;
-}
 
-ul.topMeny 
+nav
 {
     height: 15vh;
     overflow: hidden;
@@ -46,20 +51,52 @@ ul.topMeny
     padding: 0;
     margin: 0;
     background-color: azure;
+	width: 99vw;
 }
-
-
-ul.topMeny > #grenarMeny
+nav > ul
 {
-    float:right
+	list-style:none;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	padding:0;
 }
 
-ul.topMeny > #indexMeny {
-
+nav > ul a {
+    display: block;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    font: 34px Arial;
+    text-decoration: none;
+    border-radius: 25px;
+	background-color: grey;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
 }
 
-ul.topMeny > #rankingMeny {
-   float: left;
+nav ul li{
+	width: 80%;
 }
 
+a
+{
+    text-decoration: none;
+}	
+	a:hover
+	{
+		background-color: red;
+	}
 
+
+.rankingboard 
+{
+    justify-content: center;
+    border-collapse: collapse;
+    width: 90%;
+}
+    .rankingboard > tr, th 
+    {
+        border: solid 2px black;
+    }
