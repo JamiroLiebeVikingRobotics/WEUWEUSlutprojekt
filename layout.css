@@ -2,6 +2,7 @@
 body
 {
     background-color: aqua;
+	background-image:url("https://opspectraining.com/wp-content/uploads/2012/04/advanced-competition-pistol.jpg");
 }
 .grid
 {
@@ -11,9 +12,9 @@ body
     grid-template-rows:20vh 15vh 30vh 25vh 10vh;
     grid-template-areas:
 						"nav nav nav"
-						"... titel ..."
-                        "... bild ..."
-                        "... text ..."
+						"vt titel ht"
+                        "vm bild hm"
+                        "vn text hn"
                         "footer footer footer";
 }
 
@@ -32,7 +33,15 @@ body
 {
     grid-area: bild;
     background-color: springgreen;
+	overflow: hidden;
 }
+
+.bild > img
+{
+	
+}
+
+
 .text {
     grid-area: text;
     background-color: palevioletred;
@@ -51,7 +60,7 @@ nav
     padding: 0;
     margin: 0;
     background-color: azure;
-	width: 99vw;
+	width: 100vw;
 }
 nav > ul
 {
@@ -71,9 +80,10 @@ nav > ul a {
 	background-color: grey;
     background-position: left top;
     background-repeat: repeat;
-    padding: 5%;
-    width: 100%;
-    height: 100%;
+	padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    height: 90%;
 }
 
 nav ul li{
@@ -89,10 +99,15 @@ a
 		background-color: red;
 	}
 
+	a:active
+	{
+		background-color:rgba(255,255,255,1)
+	}
+
 
 .rankingboard 
 {
-    justify-content: center;
+    justify-items: center;
     border-collapse: collapse;
     width: 90%;
 }
@@ -100,3 +115,57 @@ a
     {
         border: solid 2px black;
     }
+
+.grenbild
+{
+	grid-area: bild;
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQr2xZmRPRClx5vSGQJuLwSyQyV9OoS9Ol2B97vLtAACoD_6TiO&usqp=CAU");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+}
+/*Vänster kolumn grid*/
+
+.vm
+{
+	grid-area: vm;
+	background-color: green;
+	border: 2px solid black;
+	overflow: hidden;
+
+}
+.vm > p 
+{
+	padding-left: 10%;
+	padding-right:10%;
+}
+/* Höger kolumn av gridden*/
+.ht
+{
+	grid-area:ht;
+	overflow: hidden;
+
+}
+	.ht > ul
+	{
+		list-style-type: none;
+		
+
+	}
+		.ht > ul > li
+		{
+			display: block;
+			background-color: grey;
+			margin: 10%;
+			border: 2px solid black;
+			width: 80%;
+			
+		}
+
+.hm
+{
+	grid-area: hm;
+	overflow: hidden;
+	background-color: red;
+}
