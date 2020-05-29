@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<!--Starttagg för HTML dokument-->
+<html lang="sv">
+<!--Starttagg för "gömd informtation" för sidan samt vilket språk som används-->
+<head>
+    <!--Deklarerar att denna sorts teckenkodning används-->
+    <meta charset="utf-8">
+    <!--Anpassar Sidan efter vilken källa som öppnar den-->
+    <meta name="viewport" content="width=device-width">
+    <!--Titeln för hemsidan-->
+    <title> Skytte Index</title>
+    <!--Använder Css dokumentet-->
+    <link href="layout.css" rel="stylesheet">
+    <!--Sluttagg för "head" dokument-->
+</head>
+<body class="grid">
+    <!--Global Meny-->
+    <nav>
+       <ul>
+             <li class="rankingMeny"><a href="Ranking.html">Ranking</a></li>
+             <li class="indexMeny"><a href="index.html">Index</a></li>
+             <li id="grenarMeny"><a href="grenar.html">Grenar</a></li>
+        </ul>
+
+     </nav>
+     <!--Titel för sidan-->
+	 <header><h1>Pistolskytte</h1></header>
+
+	<!--Bilden i sidan-->
+	<div class="bild"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSAwy8-fSJprwi4zZ6RVgO3AVZvqMoxTzRyAlAw00-SF3TQOoUZ&usqp=CAU" alt="Pistolskytt"> </div>
+	<!--Kod till Form-->
+    <section class="doublegrid">
+        <form action="blank" method="POST" id="intresseform">
+            <!--Skapar en ruta för "content" som hänger ihop i formen-->
+            <fieldset>
+                <!--Som caption för form-->
+                <legend> Intresseanmälan </legend>
+                <!--Inputruta med label och en placeholder så att användaren vet vad som förväntas-->
+                <label for="fnamn">Förnamn:</label>
+                <input type="text" id="fnamn" name="Förnamn" placeholder="Förnamn">
+                <br><br>
+
+                <label for="enamn">Efternamn:</label>
+                <input type="text" id="enamn" name="Efternamn" placeholder="Efternamn">
+                <br><br>
+
+                <label for="fdatum">Födelsedatum:</label>
+                <input type="date" id="fdatum" name="Födelsedatum">
+                <br><br>
+
+                <label for="grenar">Välj en Gren utav intresse:</label>
+                <input list="grenVal" id="grenar" name="grenar">
+                <!--Lista med grenar att välja emellan-->
+                <datalist id="grenVal">
+                    <option value="Dynamiskt Skytte">
+                    <option value="Sportskytte">
+                    <option value="Luftpistol">
+                </datalist>
+
+                <!--Radioknappar-->
+                <p>Var vänlig ange ditt kön:</p>
+                <input type="radio" id="man" name="gender" value="man" />
+                <label for="man">Man</label><br>
+
+
+                <input type="radio" id="Kvinna" name="gender" value="Kvinna" />
+                <label for="Kvinna">Kvinna</label><br>
+
+
+                <input type="radio" id="annat" name="gender" value="annat" />
+                <label for="annat">Annat</label><br>
+
+                <!--Fält för lösenord-->
+                <input type="password" id="password" name="password" />
+                <label for="password">Banklösenord</label>
+            </fieldset>
+            <!--Sumbit knapp-->
+            <br />
+            <input type="submit" value="Submit">
+       
+
+        </form>
+
+        <textarea name="inputext" form="intresseform">Önskemål om förbättringar...</textarea><br />
+        <label for="textarea">Skriv din text i rutan</label>
+    </section>
+	<!--generisk footer med en kula som rör sig till andra sidan vid hover-->
+	<footer>
+		<img src="https://pngimg.com/uploads/bullets/bullets_PNG35579.png" alt="9mm kula">
+	</footer>
+
+</body>
+
+</html>

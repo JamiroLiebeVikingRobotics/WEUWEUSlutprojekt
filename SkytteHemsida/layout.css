@@ -1,0 +1,280 @@
+﻿/*Nedladdningsbart font*/
+
+@font-face{ 
+		
+		src:url(font/RobotoMono-LightItalic.ttf);
+		font-family: roboto;
+}
+/*Keyframes för animeringen på footern då skottet rör sig från vänster till höger */
+@keyframes skott {
+  0%   {left:0px; top:0px;}
+  100% {left:90%; top:0px;}
+}
+
+
+/* Bakgrundsinformation och bild*/
+body
+{
+    background-color: aqua;
+	background-image:url("https://opspectraining.com/wp-content/uploads/2012/04/advanced-competition-pistol.jpg");
+}
+
+/*Reaktiv Trespaltsgrid*/
+.grid
+{
+	padding: 0%;
+    text-align:center;
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-rows:20vh 15vh 30vh 25vh 10vh;
+    grid-template-areas:
+						"nav nav nav"
+						"vt titel ht"
+                        "vm bild hm"
+                        "vn text hn"
+                        "footer footer footer";
+}
+
+/*Information för allt inom .titel griden-arean*/
+header
+{
+    grid-area: titel;
+    background-color: green;
+	font-size: 2vh;
+}	
+	header > h1
+	{
+		text-align:center;
+		font-size: 2.5em;
+
+	}
+
+h2
+{
+	font-size:3vh;
+}
+
+
+
+	/*Information för allt inom .bild griden-arean*/
+.bild
+
+{
+    grid-area: bild;
+    background-color: springgreen;
+	overflow: hidden;
+}
+
+
+/*Information för allt inom .text griden-arean*/
+.text {
+    grid-area: text;
+    background-color: palevioletred;
+}
+
+/*Koden för navmenyerna, bestämmer utseende position m.m*/
+nav
+{
+    height: 15vh;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: azure;
+	width: 100vw;
+}
+/*Stilklass för listan i naven*/
+nav > ul
+{
+	list-style:none;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	padding:10px;
+}
+/*Stilklass för alla a inom nav ul*/
+nav > ul a {
+    display: block;
+    color: rgba(255,255,255,1);
+    text-align: center;
+	font-family: roboto;
+    font: 34px;
+    text-decoration: none;
+    border-radius: 25px;
+	background-color: grey;
+    background-position: left top;
+    background-repeat: repeat;
+	padding-top: 5%;
+    padding-bottom: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+/*Stilkod som påverkar alla länkar på sidan*/
+a
+{
+    text-decoration: none;
+}	
+
+	/*LoVe Focus hAte*/
+	a:link
+	{
+		background-color:rgba(0 ,0 ,255 ,0.6);
+	}
+
+	a:visited
+	{
+		font-family: Arial;
+	}
+
+	a:focus
+	{
+		border-radius: 2px;
+	}
+
+	a:hover
+	{
+		background-color:rgba(255 ,0 ,0 ,1);
+	}
+
+	a:active
+	{
+		background-color:rgba(255, 255, 255, 1);
+	}
+
+
+
+	
+
+
+
+.rankingboard 
+{
+    justify-items: center;
+    border-collapse: collapse;
+    width: 90%;
+}
+    /*Denna klassen gäller för båda tr och th*/
+    .rankingboard > tr, th 
+    {
+        border: solid 2px black;
+    }
+
+		/* Gruppselektor för tabellkroppen*/
+	tr:nth-child(2),tr:nth-child(4)
+	{
+		background-color:black;
+		color: rgba(255, 255, 255, 1);
+		font-family:Arial;
+		border:rgba(255, 255, 255, 1);
+	}
+	/* Gruppselektor för tabellkroppen*/
+	tr:nth-child(3),tr:nth-child(1)
+	{
+		background-color:white;
+		border:rgba(0, 0, 0, 1);
+		border:rgba(0, 0, 0, 1);
+		font-family: Arial;
+	}
+
+
+.grenbild
+{
+	grid-area: bild;
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQr2xZmRPRClx5vSGQJuLwSyQyV9OoS9Ol2B97vLtAACoD_6TiO&usqp=CAU");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/*Koden för Iframe videon*/
+iframe
+{
+	grid-area: bild;
+	margin: 0 auto;
+	border: solid 2px;
+	width: 60%;
+	height: 95%;
+
+}
+
+.doublegrid
+{
+       
+    grid-row-start: vm;
+    grid-row-end: vn;
+    background-color:rgba(200, 255, 0, 1);
+}
+
+/*Vänster kolumn grid*/
+
+.vt
+{
+	grid-area: vt;
+	background-color: yellow;
+}
+
+
+.vm
+{
+	grid-area: vm;
+	background-color: green;
+	border: 2px solid black;
+	overflow: hidden;
+
+}
+.vm > p 
+{
+	padding-left: 10%;
+	padding-right:10%;
+}
+/* Höger kolumn av gridden*/
+.ht
+{
+	grid-area:ht;
+	overflow: hidden;
+  
+}
+    /*Tar bort list stilen*/
+	.ht > ul
+	{
+		list-style-type: none;
+		
+
+	}
+        /*Stil för den lokala menyn*/
+        .ht > ul > li {
+
+            display: block;
+            background-color: white;
+            border: 2px solid black;
+            width: 80%;
+         
+        }
+
+/*Stilkod för höge mitt*/
+.hm
+{
+	grid-area: hm;
+	overflow: hidden;
+	background-color:rgba(200, 0, 0, 0.5);
+}
+/*Kod för footern*/
+footer {
+    grid-area: footer;
+    background-color: #FF33EC;
+    padding: 0%;
+}
+
+footer > img{
+	display: block;
+	width: 5%;
+}
+/*När musen hovrar över bilden körs animationen*/
+footer > img:hover{
+	animation-name: skott;
+	animation-duration:4s;
+	position: relative;
+
+}	
+
